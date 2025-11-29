@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium';
+}
+
+body{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    min-height: 100vh;
+    
+}
+
+a{
+    position: relative;
+    display: inline-block;
+    font-size: 2em;
+    letter-spacing: .1em;
+    color: deepskyblue;
+    text-transform: uppercase;
+    border: 2px solid rgb(74, 158, 241);
+    padding: 20px 30px;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 1s, box-shadow 1s; 
+    
+
+}
+
+a:hover{
+    transition-delay: 0s 1s;
+    color: white;
+    box-shadow: 0 0 10px #0ef,
+                 0 0 20px #0ef,
+                 0 0 40px #0ef,
+                 0 0 80px #0ef,
+                 0 0 160px #0ef;
+    
+}
+
+a::before{
+    content:"";
+    top: 0;
+    position: absolute;
+    left: -50%;
+    transform: skewX(35deg);
+    width: 0;
+    height: 100%;
+    background-color: #0ef;
+    transition: 1s;
+    z-index: -1;
+
+}
+
+a:hover:before {
+    width: 100%;
+}
